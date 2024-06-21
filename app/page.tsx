@@ -347,7 +347,7 @@ const App = () => {
 
 
           <section className="mt-24">
-            <div className="flex flex-col gap-2 justify-center items-center text-4xl font-bold text-center text-gray-800 dark:text-gray-200">
+            <div className="flex flex-col gap-2 justify-center items-center text-4xl font-bold text-center text-gray-800">
               <div className="flex flex-row gap-4 justify-center items-center">
                 <img src="/design.jpg" alt="Design" className="w-12 h-12 rounded-full" />
                 Contact Me
