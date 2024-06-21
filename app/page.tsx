@@ -84,24 +84,24 @@ const App = () => {
         />
 
 
-        <div className="fixed flex justify-between items-center px-4 z-20 w-[90%] md:w-[80%] mt-4 mx-auto border-2 border-gray-200 dark:border-gray-800 border-2 border-white rounded-lg shadow-lg"
+        <div className="bg-stone fixed flex justify-between items-center px-4 z-20 w-[90%] md:w-[80%] mt-4 mx-auto border-2 border-gray-200 border-2 border-white rounded-lg shadow-lg"
           style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
         >
           <img src="/Logo.png" alt="Logo" className="w-30 h-12 rounded-t-lg" />
-          <div className="flex flex-row gap-2 justify-center items-center text-md text-center text-gray-800 dark:text-gray-200">
-            <div className="hidden md:block text-center text-sm font-semibold hover:text-gray-600 dark:hover:text-gray-400 cursor-pointer border-r-2 border-gray-200 dark:border-gray-800 pr-2" onClick={() => //scroll to testimonials
+          <div className="flex flex-row gap-2 justify-center items-center text-md text-center text-gray-800 ">
+            <div className="hidden md:block text-center text-sm font-semibold hover:text-gray-600 text-gray-400 cursor-pointer border-r-2 border-gray-200 pr-2" onClick={() => //scroll to testimonials
               document.getElementById("testimonials")?.scrollIntoView({ behavior: "smooth" })
             }>
               Testimonials
             </div>
-            <div className=" hidden md:block text-center text-sm font-semibold hover:text-gray-600 dark:hover:text-gray-400 cursor-pointer border-r-2 border-gray-200 dark:border-gray-800 pr-2"
+            <div className=" hidden md:block text-center text-sm font-semibold hover:text-gray-600 hover:text-gray-400 cursor-pointer border-r-2 border-gray-200 pr-2"
               onClick={() => //scroll to projects
                 document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
               }
             >
               Projects
             </div>
-            <button className="bg-gray-200 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 dark:hover:bg-gray-400 transition duration-300 ease-in-out">
+            <button className="bg-gray-200 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 transition duration-300 ease-in-out">
               Get Quote
             </button>
           </div>
@@ -114,7 +114,7 @@ const App = () => {
             <div className="absolute inset-0 m-auto max-w-xs h-[200px] blur-[800px] sm:max-w-md md:max-w-lg" style={{ background: "#8b8b8bc0" }}></div>
             <div className="relative max-w-screen-xl mx-auto px-4 py-28 md:px-8">
 
-              <div className="flex flex-row gap-2 justify-center items-center text-5xl md:text-8xl font-bold text-center text-gray-800 dark:text-gray-200">
+              <div className="flex flex-row gap-2 justify-center items-center text-5xl md:text-8xl font-bold text-center text-gray-800">
                 <img src="/design.jpg" alt="Design" className="w-16 h-16 md:w-24 md:h-24 rounded-full" />
                 gkrastenov
               </div>
@@ -204,7 +204,7 @@ const App = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2 justify-center items-center text-xl font-bold text-center text-gray-800 dark:text-gray-200 mt-8">
+              <div className="flex flex-col gap-2 justify-center items-center text-xl font-bold text-center text-gray-800 mt-8">
                 Trusted by
                 <div className="flex flex-row flex-wrap gap-6 justify-center items-center p-2 rounded border-2 border-white"
                   // style={{ backgroundColor: "#1F2128" }}
@@ -221,8 +221,8 @@ const App = () => {
             </div>
           </section>
           <section className="mt-8" id="testimonials">
-            <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-200"> Testimonials </h1>
-            <p className="text-center text-gray-800 dark:text-gray-200">Here are some of the latest testimonials from my clients</p>
+            <h1 className="text-4xl font-bold text-center text-gray-800"> Testimonials </h1>
+            <p className="text-center text-gray-800">Here are some of the latest testimonials from my clients</p>
             <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
               <div className="flex flex-col gap-2 justify-start items-start p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                 <div className="text-sm font-light text-left text-gray-800">
