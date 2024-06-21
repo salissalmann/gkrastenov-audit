@@ -1,12 +1,12 @@
 'use client'
 import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
-import Particles from "react-particles";
+import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 import NumInc from "@/app/(components)/numInc";
 import Link from "next/link";
-import MotionDiv from "@/app/(components)/motion-div";
+// import MotionDiv from "@/app/(components)/motion-div";
 
 const App = () => {
   const particlesInit = useCallback(async (engine: Engine) => {

@@ -14,7 +14,6 @@
     "next-transpile-modules": "^10.0.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-particles": "^2.12.2",
     "react-tsparticles": "^2.12.2",
     "tsparticles": "^3.4.0",
     "tsparticles-engine": "^2.12.0",
