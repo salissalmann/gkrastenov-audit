@@ -89,7 +89,7 @@ const App = () => {
         >
           <img src="/Logo.png" alt="Logo" className="w-30 h-12 rounded-t-lg" />
           <div className="flex flex-row gap-2 justify-center items-center text-md text-center text-gray-800 ">
-            <div className="hidden md:block text-center text-sm font-semibold hover:text-gray-600 text-gray-400 cursor-pointer border-r-2 border-gray-200 pr-2" onClick={() => //scroll to testimonials
+            <div className="hidden md:block text-center text-sm font-semibold hover:text-gray-600 text-gray-800 cursor-pointer border-r-2 border-gray-200 pr-2" onClick={() => //scroll to testimonials
               document.getElementById("testimonials")?.scrollIntoView({ behavior: "smooth" })
             }>
               Testimonials
@@ -101,7 +101,7 @@ const App = () => {
             >
               Projects
             </div>
-            <button className="bg-gray-200 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 transition duration-300 ease-in-out">
+            <button className="bg-gray-200 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 hover:text-gray-200 transition duration-300 ease-in-out">
               Get Quote
             </button>
           </div>
@@ -359,7 +359,7 @@ const App = () => {
                 <button className="bg-gray-700 p-1 px-4 text-sm font-semibold text-white border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 dark:hover:bg-gray-400 transition duration-300 ease-in-out">
                   Get Quote
                 </button>
-                <button className="bg-gray-200 p-1 px-4 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 dark:hover:bg-gray-400 transition duration-300 ease-in-out">
+                <button className="bg-gray-200 p-1 px-4 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 hover:text-gray-200 transition duration-300 ease-in-out">
                   Contact Me
                 </button>
               </div>
