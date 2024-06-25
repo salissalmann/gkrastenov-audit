@@ -2,11 +2,18 @@
 import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
-//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 import NumInc from "@/app/(components)/numInc";
 import Link from "next/link";
-// import MotionDiv from "@/app/(components)/motion-div";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { GithubIcon } from "lucide-react";
 
 const App = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -16,6 +23,32 @@ const App = () => {
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
     await console.log(container);
   }, []);
+
+  const TestimonialsData = [
+    {
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      client: "GameSwift",
+      position: "CEO",
+    },
+    {
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      client: "GameSwift",
+      position: "CEO",
+    },
+    {
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      client: "GameSwift",
+      position: "CEO",
+    },
+    {
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      client: "GameSwift",
+      position: "CEO",
+    }
+
+
+  ]
+
   return (
     <>
       <main className="flex min-h-screen flex-col items-center justify-between">
@@ -96,12 +129,14 @@ const App = () => {
             </div>
             <div className=" hidden md:block text-center text-sm font-semibold hover:text-gray-600 hover:text-gray-400 cursor-pointer border-r-2 border-gray-200 pr-2"
               onClick={() => //scroll to projects
-                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+                document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              Projects
+              Services
             </div>
-            <button className="bg-gray-200 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 hover:text-gray-200 transition duration-300 ease-in-out">
+            <button className="bg-gray-200 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 hover:text-gray-200 transition duration-300 ease-in-out"
+              onClick={() => window.open("https://t.me/gkrastenov")}
+            >
               Get Quote
             </button>
           </div>
@@ -114,16 +149,29 @@ const App = () => {
             <div className="absolute inset-0 m-auto max-w-xs h-[200px] blur-[800px] sm:max-w-md md:max-w-lg" style={{ background: "#8b8b8bc0" }}></div>
             <div className="relative max-w-screen-xl mx-auto px-4 py-28 md:px-8">
 
-              <div className="flex flex-row gap-2 justify-center items-center text-5xl md:text-8xl font-bold text-center text-gray-800">
-                <img src="/design.jpg" alt="Design" className="w-16 h-16 md:w-24 md:h-24 rounded-full" />
-                gkrastenov
+              <div className="flex flex-col md:flex-row gap-2 justify-center items-center text-5xl md:text-8xl font-bold text-center text-gray-800">
+                <img src="/Logo2.png" alt="Design" className="w-24 h-24 md:w-24  md:h-24 object-cover rounded-full" />
+                Key Security
               </div>
-              <div className="text-2xl mt-4 font-bold text-center text-gray-800">
-                Independant Security Researcher
+              <div className="text-md md:text-2xl mt-4 font-bold text-center text-gray-800">
+                Fortifying the Future - Safeguarding the Web3 Frontier
+              </div>
+
+              <div className="w-3/4 mx-auto mt-8 flex justify-center gap-2">
+                <div className="w-fit rounded p-2 md:px-4 font-bold md:text-md text-gray-700 border-2 border-gray-700 font-bold text-center hover:bg-gray-700 hover:text-gray-600 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
+                  Request Quote
+                </div>
+                <div className="flex gap-2 md:px-6 rounded p-2 justify-center items-center md:text-md font-semibold bg-gray-700 text-white border-2 border-gray-700 text-center hover:bg-white hover:text-gray-700 hover:border-gray-700 hover:shadow-none transition duration-300 ease-in-out cursor-pointer">
+                  <a href="https://github.com/gkrastenov/audits">
+                    <GithubIcon size={24} />
+                  </a>
+                  Github
+                </div>
+
               </div>
 
 
-              <div className="flex flex-col w-fit mx-auto gap-2 justify-center items-center p-4 rounded border-2 border-white mt-8" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
+              {/* <div className="flex flex-col w-fit mx-auto gap-2 justify-center items-center p-4 rounded border-2 border-white mt-8" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                 <div className="text-md font-bold text-center text-gray-600">
                   Working with me, you get:
                 </div>
@@ -136,7 +184,7 @@ const App = () => {
                 <div className="rounded p-2 text-gray-700 border-2 border-gray-700 text-sm font-bold text-center hover:bg-gray-700 hover:text-gray-600 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                   Let's work together
                 </div>
-              </div>
+              </div> */}
 
               <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 w-full max-w-lg relative mx-auto mt-4">
                 <div className="flex items-center text-gray-600 relative justify-center gap-x-2 -ml-4 mt-5 ">
@@ -146,10 +194,10 @@ const App = () => {
                     alt="right"
                   />
                   <div className="-ml-2 flex flex-col justify-center items-center">
-                    <strong className="text-xl md:text-2xl">6</strong>
+                    <strong className="text-xl md:text-2xl">15+</strong>
                     <span className="text-[#1F2128] text-xs text-center">
-                      Conducted <br />
-                      Audits
+                      Satisfied <br />
+                      Clients
                     </span>
                   </div>
                   <img
@@ -223,45 +271,48 @@ const App = () => {
           <section className="mt-8" id="testimonials">
             <h1 className="text-4xl font-bold text-center text-gray-800"> Testimonials </h1>
             <p className="text-center text-gray-800">Here are some of the latest testimonials from my clients</p>
+            <Carousel
+              opts={{
+                align: "center",
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 4000,
+                }),
+              ]}
+              className="max-w-sm md:max-w-7xl mx-auto bg-transparent mt-8"
+            >
+              <CarouselContent className="flex gap-4 justify-center items-center w-full md:w-1/3 mx-auto bg-transparent ">
+                {TestimonialsData.map((item, index) => (
+                  <CarouselItem key={index} className="flex flex-col gap-2 justify-center items-center w-full mx-auto bg-transparent">
+                    <div className="flex flex-col gap-2 bg-transparent justify-start items-start p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
+                      <div className="text-sm font-light text-left text-gray-800">
+                        {item.text}
+                      </div>
+                      <div className="flex flex-row gap-2 justify-start items-center">
+                        <img src="/game.png" alt="Client" className="w-10 h-10 rounded-full" />
+                        <div className="flex flex-col justify-start items-start">
+                          <div className="text-sm text-gray-600">
+                            {item.client}
+                          </div>
+                          <div className="text-xs font-semibold text-gray-600">
+                            {item.position}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+
             <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-              <div className="flex flex-col gap-2 justify-start items-start p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
-                <div className="text-sm font-light text-left text-gray-800">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                </div>
-                <div className="flex flex-row gap-2 justify-start items-center">
-                  <img src="/game.png" alt="Client" className="w-10 h-10 rounded-full" />
-                  <div className="flex flex-col justify-start items-start">
-                    <div className="text-sm text-gray-600">
-                      GameSwift
-                    </div>
-                    <div className="text-xs font-semibold text-gray-600">
-                      CEO
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col gap-2 justify-start items-start p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
-                <div className="text-sm font-light text-left text-gray-800">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                </div>
-                <div className="flex flex-row gap-2 justify-start items-center">
-                  <img src="/game.png" alt="Client" className="w-10 h-10 rounded-full" />
-                  <div className="flex flex-col justify-start items-start">
-                    <div className="text-sm text-gray-600">
-                      GameSwift
-                    </div>
-                    <div className="text-xs font-semibold text-gray-600">
-                      CEO
-                    </div>
-                  </div>
-                </div>
-              </div>
 
             </div>
           </section>
 
 
-          <section className="mt-24" id="projects">
+          {/* <section className="mt-24" id="projects">
             <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-200"> Latest Completed Projects </h1>
             <p className="text-center text-gray-800 dark:text-gray-200">Here are some of the latest projects I have completed</p>
             <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
@@ -343,24 +394,239 @@ const App = () => {
               </div>
 
             </div>
-          </section>
+          </section> */}
+
+          <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+
+            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+              <h2
+                className="max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                <span className="relative inline-block">
+
+                  <svg viewBox="0 0 52 24" fill="#1f2937"
+                    className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-slate-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                    <defs>
+                      <pattern id="fdca20a0-aeb4-4caf-ba1b-4351eee42363" x="0" y="0" width=".135"
+                        height=".30">
+                        <circle cx="1" cy="1" r=".7"></circle>
+                      </pattern>
+                    </defs>
+                    <rect fill="url(#fdca20a0-aeb4-4caf-ba1b-4351eee42363)" width="52" height="24"></rect>
+                  </svg>
+                </span>
+                Services
+              </h2>
+              <p className="text-base text-gray-700 md:text-lg">
+                  Guided by the belief that the right approach to technology can help businesses grow and succeed, we offer a range of services that help businesses establish a strong online presence and engage with their target audience effectively.                
+              </p>
+            </div>
+
+
+            <div className="grid max-w-md gap-8 row-gap-10 sm:mx-auto lg:max-w-full lg:grid-cols-2" id="services">
+              <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
+                <div className="sm:mr-4">
+                  <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
+                    <svg className="w-12 h-12 text-green-400" stroke="#1f2937"
+                     viewBox="0 0 52 52">
+                      <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h6 className="mb-2 font-semibold leading-5">Free Audit for small projects</h6>
+                  <p className="mb-3 text-sm text-gray-900">
+                    We offer a free audit for small projects to help you understand the security risks and vulnerabilities in your project.
+                  </p>
+                  <ul className="mb-4 -ml-1 space-y-2">
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Security
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Privacy
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Compliance
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
+                <div className="sm:mr-4">
+                  <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
+                    <svg className="w-12 h-12 text-green-400" stroke="#1f2937"
+                     viewBox="0 0 52 52">
+                      <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h6 className="mb-2 font-semibold leading-5">Single Security Review</h6>
+                  <p className="mb-3 text-sm text-gray-900">
+                    We offer a single security review for your project to help you understand the security risks and vulnerabilities in your project.
+                  </p>
+                  <ul className="mb-4 -ml-1 space-y-2">
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Security
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Privacy
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Compliance
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
+                <div className="sm:mr-4">
+                  <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
+                    <svg className="w-12 h-12 text-green-400" stroke="#1f2937"
+                     viewBox="0 0 52 52">
+                      <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h6 className="mb-2 font-semibold leading-5">PPV Security Review</h6>
+                  <p className="mb-3 text-sm text-gray-900">
+                    We offer a pre-audit and fixes review for your project to help you understand the security risks and vulnerabilities in your project.
+                  </p>
+                  <ul className="mb-4 -ml-1 space-y-2">
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Security
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Privacy
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Compliance
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
+                <div className="sm:mr-4">
+                  <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
+                    <svg className="w-12 h-12 text-green-400" stroke="#1f2937"
+                     viewBox="0 0 52 52">
+                      <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h6 className="mb-2 font-semibold leading-5">Warehouse Security Consultation</h6>
+                  <p className="mb-3 text-sm text-gray-900">
+                    We offer a warehouse security consultation for your project to help you understand the security risks and vulnerabilities in your project.
+                  </p>
+                  <ul className="mb-4 -ml-1 space-y-2">
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Security
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Privacy
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Compliance
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
 
 
           <section className="mt-24">
             <div className="flex flex-col gap-2 justify-center items-center text-4xl font-bold text-center text-gray-800">
-              <div className="flex flex-row gap-4 justify-center items-center">
-                <img src="/design.jpg" alt="Design" className="w-12 h-12 rounded-full" />
+              <div className="flex flex-row gap-2 justify-center items-center">
+                <img src="/Logo2.png" alt="Design" className="w-14 h-14 rounded-full" />
                 Contact Me
               </div>
               <div className="text-2xl font-semibold text-center text-gray-800">
                 Let's work together
               </div>
               <div className="flex flex-row gap-2 justify-center items-center">
-                <button className="bg-gray-700 p-1 px-4 text-sm font-semibold text-white border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 dark:hover:bg-gray-400 transition duration-300 ease-in-out">
+                <button className="bg-gray-700 p-2 px-8 text-sm font-semibold text-white border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 dark:hover:bg-gray-400 transition duration-300 ease-in-out"
+                  onClick={() => window.open("https://t.me/gkrastenov")}
+                >
                   Get Quote
-                </button>
-                <button className="bg-gray-200 p-1 px-4 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 hover:text-gray-200 transition duration-300 ease-in-out">
-                  Contact Me
                 </button>
               </div>
 
@@ -395,10 +661,10 @@ const Footer = () => {
     <footer className="text-gray-600 body-font">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-          <img src="/design.jpg" alt="Logo" className="w-10 h-10 rounded-full" />
-          <span className="ml-3 text-xl">gkrastenov</span>
+          <img src="/Logo2.png" alt="Logo" className="w-12 h-12 rounded-full" />
+          <span className="ml-3 text-xl">Key Security</span>
         </a>
-        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 gkrastenov —
+        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Key Security —
           <a href="https://twitter.com/gkrastenov" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@gkrastenov</a>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
