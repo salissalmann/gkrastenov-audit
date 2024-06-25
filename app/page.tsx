@@ -158,13 +158,15 @@ const App = () => {
               </div>
 
               <div className="w-3/4 mx-auto mt-8 flex justify-center gap-2">
-                <div className="w-fit rounded p-2 md:px-4 font-bold md:text-md text-gray-700 border-2 border-gray-700 font-bold text-center hover:bg-gray-700 hover:text-gray-600 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
+                <div className="w-fit rounded p-2 md:px-4 font-bold md:text-md text-gray-700 border-2 border-gray-700 font-bold text-center hover:bg-gray-700 hover:text-gray-600 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
+                  onClick={() => window.open("https://t.me/gkrastenov")}
+                >
                   Request Quote
                 </div>
-                <div className="flex gap-2 md:px-6 rounded p-2 justify-center items-center md:text-md font-semibold bg-gray-700 text-white border-2 border-gray-700 text-center hover:bg-white hover:text-gray-700 hover:border-gray-700 hover:shadow-none transition duration-300 ease-in-out cursor-pointer">
-                  <a href="https://github.com/gkrastenov/audits">
+                <div className="flex gap-2 md:px-6 rounded p-2 justify-center items-center md:text-md font-semibold bg-gray-700 text-white border-2 border-gray-700 text-center hover:bg-white hover:text-gray-700 hover:border-gray-700 hover:shadow-none transition duration-300 ease-in-out cursor-pointer"
+                  onClick={() => window.open("https://github.com/gkrastenov/audits")}
+                >
                     <GithubIcon size={24} />
-                  </a>
                   Github
                 </div>
 
