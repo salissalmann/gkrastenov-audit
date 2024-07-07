@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GithubIcon } from "lucide-react";
+import { log } from "console";
 
 const App = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -35,11 +36,13 @@ const App = () => {
       text: "Very big thanks to the Key Security Team for your help, especially in the last days. This project would not have happened without your support.",
       client: "SpartaDex",
       position: "Engineering Team",
+      logo: "/logo.svg",
     },
     {
       text: "Georgi, I have only had good experiences while working with you, and that's why when I have something to audit, I reach out to you. You did great with every audit and I would definitely recommend you.",
       client: "GameSwift",
       position: "Tomasz Kowalczyk, CTO",
+      logo: "/game.png",
     },
     {
       text: "Service was professional, with good communication and support. Would recommend 👍. Georgi also accommodated his offer to match our expectations, which is great to see in an auditor.",
@@ -50,11 +53,13 @@ const App = () => {
       text: "The Key Security Team has been super helpful in making changes to our contract, optimizing it, and auditing it. Communication was very responsive and quick. They were recommended to us by another developer we worked with, and it has been a great experience. We will definitely work with them again. Despite the timezone gap, they stayed with us throughout the whole session while working on the code.",
       client: "Lo-Fi Pepe Collection",
       position: "Vins, Founder",
+      logo: "/lofi.jpg",
     },
     {
       text: "10/10, would recommend. Thorough audit, very professional. Hire this team!",
       client: "Paytr",
       position: "Pieter Claesen, Founder",
+      logo: "/paytr.png",
     },
   ]
 
@@ -332,10 +337,10 @@ const App = () => {
                         {item.text}
                       </div>
                       <div className="flex flex-row gap-2 justify-start items-center">
-                        <img src="/game.png" alt="Client" className="w-10 h-10 rounded-full" />
+                        <img src={item.logo ? item.logo : "/game.png"} alt="Client" className="w-10 h-10 rounded-full" />
                         <div className="flex flex-col justify-start items-start">
                           <div className="text-sm text-gray-600">
-                            {item.client}
+                            {item.client}-1
                           </div>
                           <div className="text-xs font-semibold text-gray-600">
                             {item.position}
