@@ -299,7 +299,7 @@ const App = () => {
                     <div className="text-xs font-semibold text-gray-600">DYAD</div>
                   </div>
                   <div className="flex flex-col gap-2 justify-center items-center">
-                  <Link href="https://x.com/alaska_game"><img src="/alaska.jpg" altg="Star Heros" className="w-16 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                  <Link href="https://x.com/alaska_game"><img src="/alaska.jpg" alt="Star Heros" className="w-16 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
                     <div className="text-xs font-semibold text-gray-600">Alaska</div>
                   </div>
                     
