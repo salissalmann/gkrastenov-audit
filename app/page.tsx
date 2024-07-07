@@ -28,9 +28,16 @@ const App = () => {
 
   const TestimonialsData = [
     {
-      text: "I'd like to give a big shoutout to the Key Security Team for their stellar support during our recent audit. They were not only super responsive but also incredibly helpful throughout the whole process. The Key Security Team made sure every part of the audit ran smoothly and that all findings were handled perfectly. It was a breeze working with them, thanks to their proactive approach and thorough understanding of everything that needed to be done. Thanks for making the audit such a smooth experience, Key Security Team! I would totally work with them again in a heartbeat.",
-      client: "Jan Kwiatkowski",
-      position: "Core Developer - Cookie3",
+      text: "Service was professional, with good communication and support. Would recommend 👍. Georgi also accommodated his offer to match our expectations, which is great to see in an auditor.",
+      client: "Yield.Meme",
+      position: "Core Developer, Cuddle Champ",
+      logo: "/yeildmeme.jpeg",
+    },
+    {
+      text: "Georgi, I have only had good experiences while working with you, and that's why when I have something to audit, I reach out to you. You did great with every audit and I would definitely recommend you.",
+      client: "GameSwift",
+      position: "CTO, Tomasz Kowalczyk",
+      logo: "/game.png",
     },
     {
       text: "Very big thanks to the Key Security Team for your help, especially in the last days. This project would not have happened without your support.",
@@ -39,29 +46,23 @@ const App = () => {
       logo: "/sparta.jpeg",
     },
     {
-      text: "Georgi, I have only had good experiences while working with you, and that's why when I have something to audit, I reach out to you. You did great with every audit and I would definitely recommend you.",
-      client: "GameSwift",
-      position: "Tomasz Kowalczyk, CTO",
-      logo: "/game.png",
-    },
-    {
-      text: "Service was professional, with good communication and support. Would recommend 👍. Georgi also accommodated his offer to match our expectations, which is great to see in an auditor.",
-      client: "Yield.Meme",
-      position: "Cuddle Champ, Core Developer",
-      logo: "/yeildmeme.jpeg",
+      text: "10/10, would recommend. Thorough audit, very professional. Hire this team!",
+      client: "Paytr",
+      position: "Founder, Pieter Claesen",
+      logo: "/paytr.png",
     },
     {
       text: "The Key Security Team has been super helpful in making changes to our contract, optimizing it, and auditing it. Communication was very responsive and quick. They were recommended to us by another developer we worked with, and it has been a great experience. We will definitely work with them again. Despite the timezone gap, they stayed with us throughout the whole session while working on the code.",
       client: "Lo-Fi Pepe Collection",
-      position: "Vins, Founder",
+      position: "Founder, Vins",
       logo: "/lofi.jpg",
     },
     {
-      text: "10/10, would recommend. Thorough audit, very professional. Hire this team!",
-      client: "Paytr",
-      position: "Pieter Claesen, Founder",
-      logo: "/paytr.png",
+      text: "I'd like to give a big shoutout to the Key Security Team for their stellar support during our recent audit. They were not only super responsive but also incredibly helpful throughout the whole process. The Key Security Team made sure every part of the audit ran smoothly and that all findings were handled perfectly. It was a breeze working with them, thanks to their proactive approach and thorough understanding of everything that needed to be done. Thanks for making the audit such a smooth experience, Key Security Team! I would totally work with them again in a heartbeat.",
+      client: "Jan Kwiatkowski",
+      position: "Core Developer - Cookie3",
     },
+
   ]
 
   return (
@@ -177,9 +178,9 @@ const App = () => {
                   onClick={() => window.open("https://github.com/keysecurityltd/portfolio")}
                 >
                   {/* <GithubIcon size={24} /> */}
-                  Portfolio
+                  Audit Portfolio
                 </div>
-                <div className="w-fit rounded p-2 md:px-4 font-bold md:text-md text-gray-700 border-2 border-gray-700 font-bold text-center hover:bg-gray-700 hover:text-gray-600 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
+                <div className="bg-gray-700 text-white w-fit rounded p-2 md:px-4 font-bold md:text-md border-2 border-gray-700 font-bold text-center hover:bg-gray-700 hover:text-gray-300 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer"
                   onClick={() => window.open("https://t.me/gkrastenov")}
                 >
                   Request Quote
@@ -277,7 +278,7 @@ const App = () => {
                 >
                   <div className="flex flex-col gap-2 justify-center items-center">
                     <Link href="https://spartadex.io/"><img src="/sparta.jpeg" alt="Sparta Dex" className="w-18 h-16 object-cover rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
-                    <div className="text-xs font-semibold text-gray-600">Sparta Dex</div>
+                    <div className="text-xs font-semibold text-gray-600">SpartaDex</div>
                   </div>
                   <div className="flex flex-col gap-2 justify-center items-center">
                   <Link href="https://gameswift.io/"><img src="/logo2.png" alt="Trusted" className="w-28 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
@@ -555,7 +556,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      <span className="text-yellow-600 font-bold">
+                      <span className="text-yellow-400 font-bold">
                         Refund policy
                       </span>
                     </li>
