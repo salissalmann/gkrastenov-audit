@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Request Audit - gkrastenov",
+  title: "Key Security",
   description: "Independant Security Researcher"
 };
 
