@@ -545,9 +545,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      <span className="text-yellow-600 font-bold">
                         Free audit for new changes (up to 20% of the codebase)
-                      </span>
                     </li>
 
                     <li className="flex items-start">
