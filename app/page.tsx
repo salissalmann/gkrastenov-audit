@@ -24,29 +24,38 @@ const App = () => {
     await console.log(container);
   }, []);
 
+
   const TestimonialsData = [
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      client: "GameSwift",
-      position: "CEO",
+      text: "I'd like to give a big shoutout to the Key Security Team for their stellar support during our recent audit. They were not only super responsive but also incredibly helpful throughout the whole process. The Key Security Team made sure every part of the audit ran smoothly and that all findings were handled perfectly. It was a breeze working with them, thanks to their proactive approach and thorough understanding of everything that needed to be done. Thanks for making the audit such a smooth experience, Key Security Team! I would totally work with them again in a heartbeat.",
+      client: "Jan Kwiatkowski",
+      position: "Core Developer - Cookie3",
     },
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      client: "GameSwift",
-      position: "CEO",
+      text: "Very big thanks to the Key Security Team for your help, especially in the last days. This project would not have happened without your support.",
+      client: "SpartaDex",
+      position: "Engineering Team",
     },
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      text: "Georgi, I have only had good experiences while working with you, and that's why when I have something to audit, I reach out to you. You did great with every audit and I would definitely recommend you.",
       client: "GameSwift",
-      position: "CEO",
+      position: "Tomasz Kowalczyk, CTO",
     },
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      client: "GameSwift",
-      position: "CEO",
-    }
-
-
+      text: "Service was professional, with good communication and support. Would recommend 👍. Georgi also accommodated his offer to match our expectations, which is great to see in an auditor.",
+      client: "Yield.Meme",
+      position: "Cuddle Champ, Core Developer",
+    },
+    {
+      text: "The Key Security Team has been super helpful in making changes to our contract, optimizing it, and auditing it. Communication was very responsive and quick. They were recommended to us by another developer we worked with, and it has been a great experience. We will definitely work with them again. Despite the timezone gap, they stayed with us throughout the whole session while working on the code.",
+      client: "Lo-Fi Pepe Collection",
+      position: "Vins, Founder",
+    },
+    {
+      text: "10/10, would recommend. Thorough audit, very professional. Hire this team!",
+      client: "Paytr",
+      position: "Pieter Claesen, Founder",
+    },
   ]
 
   return (
@@ -150,21 +159,22 @@ const App = () => {
             <div className="relative max-w-screen-xl mx-auto px-4 py-28 md:px-8">
 
               <div className="flex flex-col md:flex-row gap-2 justify-center items-center text-5xl md:text-8xl font-bold text-center text-gray-800">
-                <img src="/Logo2.png" alt="Design" className="w-24 h-24 md:w-24  md:h-24 object-cover rounded-full" />
+                <img src="/Logo2.png" alt="Design" className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full" />
                 Key Security
               </div>
-              <div className="text-md md:text-2xl mt-4 font-bold text-center text-gray-800">
+              {/* <div className="text-md md:text-2xl mt-4 font-bold text-center text-gray-800">
                 Fortifying the Future - Safeguarding the Web3 Frontier
-              </div>
+              </div> */}
 
               <div className="w-3/4 mx-auto mt-8 flex justify-center gap-2">
                 <div className="w-fit rounded p-2 md:px-4 font-bold md:text-md text-gray-700 border-2 border-gray-700 font-bold text-center hover:bg-gray-700 hover:text-gray-600 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
                   onClick={() => window.open("https://t.me/gkrastenov")}
                 >
+                  
                   Request Quote
                 </div>
                 <div className="flex gap-2 md:px-6 rounded p-2 justify-center items-center md:text-md font-semibold bg-gray-700 text-white border-2 border-gray-700 text-center hover:bg-white hover:text-gray-700 hover:border-gray-700 hover:shadow-none transition duration-300 ease-in-out cursor-pointer"
-                  onClick={() => window.open("https://github.com/gkrastenov/audits")}
+                  onClick={() => window.open("https://github.com/keysecurityltd/portfolio")}
                 >
                     <GithubIcon size={24} />
                   Github
@@ -216,7 +226,7 @@ const App = () => {
                   />
                   <div className="-ml-2 flex text-gray-600 flex-col justify-center gap-x-2 items-center">
                     <strong className="text-xl md:text-2xl">
-                      <NumInc num={20} delay={1} />
+                      <NumInc num={100} delay={1} />
                       <span className="text-gray-600">+</span>
                     </strong>
                     <span className="text-[#1F2128] text-xs font-normal text-center">
@@ -238,7 +248,7 @@ const App = () => {
                   />
                   <div className="-ml-2 flex text-gray-600 flex-col justify-center gap-x-2 items-center">
                     <strong className="text-xl md:text-2xl">
-                      <NumInc num={10} delay={1} />
+                      <NumInc num={100} delay={1} />
                       <span className="text-gray-600">M+</span>
                     </strong>
                     <span className="text-[#1F2128] text-xs font-normal text-center">
@@ -264,8 +274,17 @@ const App = () => {
                   <Link href="https://gameswift.io/"><img src="/logo2.png" alt="Trusted" className="w-28 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
                   <Link href="https://x.com/Cookie3_com"><img src="/cookie.jpg" alt="Cookie" className="w-16 h-16 rounded border-2 border-white  cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
                   <Link href="https://x.com/StarHeroes_game"><img src="/pbs.jpg" alt="Star Heros" className="w-16 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
-
                 </div>
+                <div className="flex flex-row flex-wrap gap-6 justify-center items-center p-2 rounded border-2 border-white"
+                  // style={{ backgroundColor: "#1F2128" }}
+                  style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
+                >
+                  <Link href="https://x.com/paytr_protocol"><img src="/paytr.png" alt="Sparta Dex" className="w-18 h-16 object-cover rounded cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                  <Link href="https://x.com/lofipepenft"><img src="/lofi.jpg" alt="Trusted" className="w-18 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                  <Link href="https://x.com/0xDYAD"><img src="/dyad.jpg" alt="Cookie" className="w-16 h-16 rounded border-2 border-white  cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                  <Link href="https://x.com/alaska_game"><img src="/alaska.jpg" alt="Star Heros" className="w-16 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                </div>
+
               </div>
 
             </div>
@@ -305,6 +324,8 @@ const App = () => {
                     </div>
                   </CarouselItem>
                 ))}
+
+
               </CarouselContent>
             </Carousel>
 
@@ -428,18 +449,11 @@ const App = () => {
               <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                 <div className="sm:mr-4">
                   <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
-                    <svg className="w-12 h-12 text-green-400" stroke="#1f2937"
-                     viewBox="0 0 52 52">
-                      <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                    </svg>
+                    <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-2 font-semibold leading-5">Free Audit for small projects</h6>
-                  <p className="mb-3 text-sm text-gray-900">
-                    We offer a free audit for small projects to help you understand the security risks and vulnerabilities in your project.
-                  </p>
+                  <h6 className="mb-2 font-semibold leading-5">Free Audit for small projects:</h6>
                   <ul className="mb-4 -ml-1 space-y-2">
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -448,7 +462,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Security
+                      Free audit for codebase under 300 nSLOC
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -457,16 +471,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Privacy
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-1">
-                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
-                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                        </svg>
-                      </span>
-                      Compliance
+                      20% discount on future audits with us
                     </li>
                   </ul>
                 </div>
@@ -474,18 +479,11 @@ const App = () => {
               <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                 <div className="sm:mr-4">
                   <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
-                    <svg className="w-12 h-12 text-green-400" stroke="#1f2937"
-                     viewBox="0 0 52 52">
-                      <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                    </svg>
+                  <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-2 font-semibold leading-5">Single Security Review</h6>
-                  <p className="mb-3 text-sm text-gray-900">
-                    We offer a single security review for your project to help you understand the security risks and vulnerabilities in your project.
-                  </p>
+                  <h6 className="mb-2 font-semibold leading-5">Single Security Review:</h6>
                   <ul className="mb-4 -ml-1 space-y-2">
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -494,7 +492,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Security
+                      Team audit by experienced security researchers
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -503,7 +501,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Privacy
+                      Consultation on project architecture
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -512,26 +510,31 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Compliance
+                      24/7 support availability after the audit
                     </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      <span className="text-orange-400">
+                      Refund if not satisfied with the service
+                      </span>
+                    </li>
+
                   </ul>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                 <div className="sm:mr-4">
                   <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
-                    <svg className="w-12 h-12 text-green-400" stroke="#1f2937"
-                     viewBox="0 0 52 52">
-                      <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                    </svg>
+                  <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
                   </div>
                 </div>
                 <div>
                   <h6 className="mb-2 font-semibold leading-5">PPV Security Review</h6>
-                  <p className="mb-3 text-sm text-gray-900">
-                    We offer a pre-audit and fixes review for your project to help you understand the security risks and vulnerabilities in your project.
-                  </p>
                   <ul className="mb-4 -ml-1 space-y-2">
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -540,7 +543,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Security
+                      Pay only for the vulnerabilities found
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -549,7 +552,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Privacy
+                      Team audit by experienced security researchers
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -558,7 +561,16 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Compliance
+                      24/7 support availability after the audit
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      Free audit for new changes (up to 20% of the codebase)
                     </li>
                   </ul>
                 </div>
@@ -566,18 +578,11 @@ const App = () => {
               <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                 <div className="sm:mr-4">
                   <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
-                    <svg className="w-12 h-12 text-green-400" stroke="#1f2937"
-                     viewBox="0 0 52 52">
-                      <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                    </svg>
+                  <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-2 font-semibold leading-5">Warehouse Security Consultation</h6>
-                  <p className="mb-3 text-sm text-gray-900">
-                    We offer a warehouse security consultation for your project to help you understand the security risks and vulnerabilities in your project.
-                  </p>
+                  <h6 className="mb-2 font-semibold leading-5">In-House Security Consultation</h6>
                   <ul className="mb-4 -ml-1 space-y-2">
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -586,7 +591,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Security
+                      Warehouse auditor assistance during development
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -595,7 +600,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Privacy
+                      Free single security review before launch
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -604,7 +609,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Compliance
+                      Help with project architecture design
                     </li>
                   </ul>
                 </div>
@@ -667,16 +672,16 @@ const Footer = () => {
           <span className="ml-3 text-xl">Key Security</span>
         </a>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Key Security —
-          <a href="https://twitter.com/gkrastenov" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@gkrastenov</a>
+          <a href="https://x.com/KeySecurityLtd" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@gkrastenov</a>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <a className="ml-3 text-gray-500" href="https://twitter.com/gkrastenov" rel="noopener noreferrer" target="_blank">
+          <a className="ml-3 text-gray-500" href="https://x.com/KeySecurityLtd" rel="noopener noreferrer" target="_blank">
             <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
               <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
             </svg>
           </a>
           {/*github*/}
-          <a className="ml-3 text-gray-500" href="https://github.com/gkrastenov/audits">
+          <a className="ml-3 text-gray-500" href="https://github.com/keysecurityltd/portfolio">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" className="w-5 h-5" viewBox="0 0 50 50">
               <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
             </svg>
