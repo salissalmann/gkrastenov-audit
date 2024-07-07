@@ -36,7 +36,7 @@ const App = () => {
       text: "Very big thanks to the Key Security Team for your help, especially in the last days. This project would not have happened without your support.",
       client: "SpartaDex",
       position: "Engineering Team",
-      logo: "/logo.svg",
+      logo: "/sparta.jpeg",
     },
     {
       text: "Georgi, I have only had good experiences while working with you, and that's why when I have something to audit, I reach out to you. You did great with every audit and I would definitely recommend you.",
@@ -48,6 +48,7 @@ const App = () => {
       text: "Service was professional, with good communication and support. Would recommend 👍. Georgi also accommodated his offer to match our expectations, which is great to see in an auditor.",
       client: "Yield.Meme",
       position: "Cuddle Champ, Core Developer",
+      logo: "/yeildmeme.jpeg",
     },
     {
       text: "The Key Security Team has been super helpful in making changes to our contract, optimizing it, and auditing it. Communication was very responsive and quick. They were recommended to us by another developer we worked with, and it has been a great experience. We will definitely work with them again. Despite the timezone gap, they stayed with us throughout the whole session while working on the code.",
@@ -148,7 +149,7 @@ const App = () => {
             >
               Services
             </div>
-            <button className="bg-gray-200 text-sm font-semibold text-gray-700 border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 hover:text-gray-200 transition duration-300 ease-in-out"
+            <button className="bg-gray-700 p-1 px-4 text-sm font-semibold text-white border-2 border-white font-semibold rounded p-1 px-2 hover:bg-gray-600 dark:hover:bg-gray-400 transition duration-300 ease-in-out"
               onClick={() => window.open("https://t.me/gkrastenov")}
             >
               Get Quote
@@ -172,17 +173,16 @@ const App = () => {
               </div> */}
 
               <div className="w-3/4 mx-auto mt-8 flex justify-center gap-2">
+              <div className="w-fit rounded p-2 md:px-4 font-bold md:text-md text-gray-700 border-2 border-gray-700 font-bold text-center hover:bg-gray-700 hover:text-gray-600 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
+                  onClick={() => window.open("https://github.com/keysecurityltd/portfolio")}
+                >
+                  {/* <GithubIcon size={24} /> */}
+                  Portfolio
+                </div>
                 <div className="w-fit rounded p-2 md:px-4 font-bold md:text-md text-gray-700 border-2 border-gray-700 font-bold text-center hover:bg-gray-700 hover:text-gray-600 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
                   onClick={() => window.open("https://t.me/gkrastenov")}
                 >
-
                   Request Quote
-                </div>
-                <div className="flex gap-2 md:px-6 rounded p-2 justify-center items-center md:text-md font-semibold bg-gray-700 text-white border-2 border-gray-700 text-center hover:bg-white hover:text-gray-700 hover:border-gray-700 hover:shadow-none transition duration-300 ease-in-out cursor-pointer"
-                  onClick={() => window.open("https://github.com/keysecurityltd/portfolio")}
-                >
-                  <GithubIcon size={24} />
-                  Github
                 </div>
 
               </div>
@@ -276,7 +276,7 @@ const App = () => {
                   style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
                 >
                   <div className="flex flex-col gap-2 justify-center items-center">
-                    <Link href="https://spartadex.io/"><img src="/logo.svg" alt="Sparta Dex" className="w-16 h-16 rounded border-2 border-white px-2 cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                    <Link href="https://spartadex.io/"><img src="/sparta.jpeg" alt="Sparta Dex" className="w-18 h-16 object-cover rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
                     <div className="text-xs font-semibold text-gray-600">Sparta Dex</div>
                   </div>
                   <div className="flex flex-col gap-2 justify-center items-center">
@@ -340,7 +340,7 @@ const App = () => {
                         <img src={item.logo ? item.logo : "/game.png"} alt="Client" className="w-10 h-10 rounded-full" />
                         <div className="flex flex-col justify-start items-start">
                           <div className="text-sm text-gray-600">
-                            {item.client}-1
+                            {item.client}
                           </div>
                           <div className="text-xs font-semibold text-gray-600">
                             {item.position}
@@ -479,7 +479,7 @@ const App = () => {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-2 font-semibold leading-5">Free Audit for small projects:</h6>
+                  <h6 className="mb-2 font-semibold leading-5">Free Audit</h6>
                   <ul className="mb-4 -ml-1 space-y-2">
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -536,7 +536,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      24/7 support availability after the audit
+                      24/7 support after the audit
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -545,8 +545,20 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      <span className="text-orange-400">
-                        Refund if not satisfied with the service
+                      <span className="text-yellow-600 font-bold">
+                        Free audit for new changes (up to 20% of the codebase)
+                      </span>
+                    </li>
+
+                    <li className="flex items-start">
+                      <span className="mr-1">
+                        <svg className="w-5 h-5 mt-px text-green-400" stroke="#1f2937" viewBox="0 0 52 52">
+                          <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                        </svg>
+                      </span>
+                      <span className="text-yellow-600 font-bold">
+                        Refund policy
                       </span>
                     </li>
 
@@ -587,7 +599,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      24/7 support availability after the audit
+                      24/7 support after the audit
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -617,7 +629,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Warehouse auditor assistance during development
+                      In-House auditor assistance during development
                     </li>
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -635,7 +647,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      Help with project architecture design
+                      Assistance with project architecture design
                     </li>
                   </ul>
                 </div>
@@ -697,14 +709,12 @@ const Footer = () => {
           <img src="/Logo2.png" alt="Logo" className="w-12 h-12 rounded-full" />
           <span className="ml-3 text-xl">Key Security</span>
         </a>
-        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Key Security —
+        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Key Security —
           <a href="https://x.com/KeySecurityLtd" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@gkrastenov</a>
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a className="ml-3 text-gray-500" href="https://x.com/KeySecurityLtd" rel="noopener noreferrer" target="_blank">
-            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
+            <img src="/x.png" alt="Logo" className="w-5 h-5 rounded-full" />
           </a>
           {/*github*/}
           <a className="ml-3 text-gray-500" href="https://github.com/keysecurityltd/portfolio">
