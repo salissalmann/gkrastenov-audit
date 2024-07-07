@@ -170,13 +170,13 @@ const App = () => {
                 <div className="w-fit rounded p-2 md:px-4 font-bold md:text-md text-gray-700 border-2 border-gray-700 font-bold text-center hover:bg-gray-700 hover:text-gray-600 hover:border-white hover:shadow-none transition duration-300 ease-in-out cursor-pointer" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
                   onClick={() => window.open("https://t.me/gkrastenov")}
                 >
-                  
+
                   Request Quote
                 </div>
                 <div className="flex gap-2 md:px-6 rounded p-2 justify-center items-center md:text-md font-semibold bg-gray-700 text-white border-2 border-gray-700 text-center hover:bg-white hover:text-gray-700 hover:border-gray-700 hover:shadow-none transition duration-300 ease-in-out cursor-pointer"
                   onClick={() => window.open("https://github.com/keysecurityltd/portfolio")}
                 >
-                    <GithubIcon size={24} />
+                  <GithubIcon size={24} />
                   Github
                 </div>
 
@@ -266,23 +266,44 @@ const App = () => {
 
               <div className="flex flex-col gap-2 justify-center items-center text-xl font-bold text-center text-gray-800 mt-8">
                 Trusted by
-                <div className="flex flex-row flex-wrap gap-6 justify-center items-center p-2 rounded border-2 border-white"
+                <div className="md:w-[35%] flex flex-row flex-wrap gap-6 justify-center items-center p-2 rounded border-2 border-white"
                   // style={{ backgroundColor: "#1F2128" }}
                   style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
                 >
-                  <Link href="https://spartadex.io/"><img src="/logo.svg" alt="Sparta Dex" className="w-16 h-16 rounded border-2 border-white px-2 cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                  <div className="flex flex-col gap-2 justify-center items-center">
+                    <Link href="https://spartadex.io/"><img src="/logo.svg" alt="Sparta Dex" className="w-16 h-16 rounded border-2 border-white px-2 cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                    <div className="text-xs font-semibold text-gray-600">Sparta Dex</div>
+                  </div>
+                  <div className="flex flex-col gap-2 justify-center items-center">
                   <Link href="https://gameswift.io/"><img src="/logo2.png" alt="Trusted" className="w-28 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                    <div className="text-xs font-semibold text-gray-600">GameSwift</div>
+                  </div>
+                  <div className="flex flex-col gap-2 justify-center items-center">
                   <Link href="https://x.com/Cookie3_com"><img src="/cookie.jpg" alt="Cookie" className="w-16 h-16 rounded border-2 border-white  cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                    <div className="text-xs font-semibold text-gray-600">Cookie3</div>
+                  </div>
+                  <div className="flex flex-col gap-2 justify-center items-center">
                   <Link href="https://x.com/StarHeroes_game"><img src="/pbs.jpg" alt="Star Heros" className="w-16 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
-                </div>
-                <div className="flex flex-row flex-wrap gap-6 justify-center items-center p-2 rounded border-2 border-white"
-                  // style={{ backgroundColor: "#1F2128" }}
-                  style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}
-                >
+                    <div className="text-xs font-semibold text-gray-600">Star Heroes</div>
+                  </div>
+                  <div className="flex flex-col gap-2 justify-center items-center">
                   <Link href="https://x.com/paytr_protocol"><img src="/paytr.png" alt="Sparta Dex" className="w-18 h-16 object-cover rounded cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                    <div className="text-xs font-semibold text-gray-600">Paytr</div>
+                  </div>
+                  <div className="flex flex-col gap-2 justify-center items-center">
                   <Link href="https://x.com/lofipepenft"><img src="/lofi.jpg" alt="Trusted" className="w-18 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                    <div className="text-xs font-semibold text-gray-600">Lo-Fi</div>
+                  </div>
+                  <div className="flex flex-col gap-2 justify-center items-center">
                   <Link href="https://x.com/0xDYAD"><img src="/dyad.jpg" alt="Cookie" className="w-16 h-16 rounded border-2 border-white  cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
-                  <Link href="https://x.com/alaska_game"><img src="/alaska.jpg" alt="Star Heros" className="w-16 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                    <div className="text-xs font-semibold text-gray-600">DYAD</div>
+                  </div>
+                  <div className="flex flex-col gap-2 justify-center items-center">
+                  <Link href="https://x.com/alaska_game"><img src="/alaska.jpg" altg="Star Heros" className="w-16 h-16 rounded border-2 border-white cursor-pointer hover:scale-110 transition duration-300 ease-in-out" /></Link>
+                    <div className="text-xs font-semibold text-gray-600">Alaska</div>
+                  </div>
+                    
+
                 </div>
 
               </div>
@@ -440,7 +461,7 @@ const App = () => {
                 Services
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                  Guided by the belief that the right approach to technology can help businesses grow and succeed, we offer a range of services that help businesses establish a strong online presence and engage with their target audience effectively.                
+                Guided by the belief that the right approach to technology can help businesses grow and succeed, we offer a range of services that help businesses establish a strong online presence and engage with their target audience effectively.
               </p>
             </div>
 
@@ -479,7 +500,7 @@ const App = () => {
               <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                 <div className="sm:mr-4">
                   <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
-                  <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
+                    <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
                   </div>
                 </div>
                 <div>
@@ -520,7 +541,7 @@ const App = () => {
                         </svg>
                       </span>
                       <span className="text-orange-400">
-                      Refund if not satisfied with the service
+                        Refund if not satisfied with the service
                       </span>
                     </li>
 
@@ -530,7 +551,7 @@ const App = () => {
               <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                 <div className="sm:mr-4">
                   <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
-                  <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
+                    <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
                   </div>
                 </div>
                 <div>
@@ -578,7 +599,7 @@ const App = () => {
               <div className="flex flex-col sm:flex-row p-4 rounded border-2 border-white" style={{ backdropFilter: "blur(5px)", backgroundColor: "rgba(200, 200, 200, 0.3)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.18)", }}>
                 <div className="sm:mr-4">
                   <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-50">
-                  <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
+                    <img src="/Logo2.png" alt="Security" className="w-12 h-12" />
                   </div>
                 </div>
                 <div>
