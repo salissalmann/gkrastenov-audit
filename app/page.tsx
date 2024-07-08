@@ -34,18 +34,6 @@ const App = () => {
       logo: "/yeildmeme.jpeg",
     },
     {
-      text: "Georgi, I have only had good experiences while working with you, and that's why when I have something to audit, I reach out to you. You did great with every audit and I would definitely recommend you.",
-      client: "GameSwift",
-      position: "CTO, Tomasz Kowalczyk",
-      logo: "/game.png",
-    },
-    {
-      text: "Very big thanks to the Key Security Team for your help, especially in the last days. This project would not have happened without your support.",
-      client: "SpartaDex",
-      position: "Engineering Team",
-      logo: "/sparta.jpeg",
-    },
-    {
       text: "10/10, would recommend. Thorough audit, very professional. Hire this team!",
       client: "Paytr",
       position: "Founder, Pieter Claesen",
@@ -57,10 +45,24 @@ const App = () => {
       position: "Founder, Vins",
       logo: "/lofi.jpg",
     },
+
+    {
+      text: "Georgi, I have only had good experiences while working with you, and that's why when I have something to audit, I reach out to you. You did great with every audit and I would definitely recommend you.",
+      client: "GameSwift",
+      position: "CTO, Tomasz Kowalczyk",
+      logo: "/game.png",
+    },
     {
       text: "I'd like to give a big shoutout to the Key Security Team for their stellar support during our recent audit. They were not only super responsive but also incredibly helpful throughout the whole process. The Key Security Team made sure every part of the audit ran smoothly and that all findings were handled perfectly. It was a breeze working with them, thanks to their proactive approach and thorough understanding of everything that needed to be done. Thanks for making the audit such a smooth experience, Key Security Team! I would totally work with them again in a heartbeat.",
       client: "Jan Kwiatkowski",
       position: "Core Developer - Cookie3",
+      logo: "/cookie.jpg",
+    },
+    {
+      text: "Very big thanks to the Key Security Team for your help, especially in the last days. This project would not have happened without your support.",
+      client: "SpartaDex",
+      position: "Engineering Team",
+      logo: "/sparta.jpeg",
     },
 
   ]
@@ -510,7 +512,7 @@ const App = () => {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-2 font-semibold leading-5">Single Security Review:</h6>
+                  <h6 className="mb-2 font-semibold leading-5">Single Security Review</h6>
                   <ul className="mb-4 -ml-1 space-y-2">
                     <li className="flex items-start">
                       <span className="mr-1">
@@ -556,7 +558,7 @@ const App = () => {
                             points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                       </span>
-                      <span className="text-yellow-400 font-bold">
+                      <span className="text-green-600 font-bold">
                         Refund policy
                       </span>
                     </li>
